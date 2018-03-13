@@ -1,0 +1,31 @@
+{
+  "name": "thehyrulefantasy",
+  "version": "1.0.0-alpha",
+  "description": "The Hyrule Fantasy",
+  "main": "keystone.js",
+  "scripts": {
+    "start": "node keystone.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/n-sider/thehyrulefantasy.git"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/n-sider/thehyrulefantasy/issues"
+  },
+  "homepage": "http://www.thehyrulefantasy.com",
+  "dependencies": {
+    "dotenv": "^5.0.1",
+    "express-handlebars": "^3.0.0",
+    "handlebars": "^4.0.11",
+    "keystone": "github:Tathanen/keystone#36e6255",
+    "keystone-email": "github:keystonejs/keystone-email#40284de",
+    "keystone-storage-adapter-s3": "github:keystonejs/keystone-storage-adapter-s3#accea76"
+  },
+  "engines": {
+    "node": ">=8.0.0",
+    "npm": ">=5.0.0"
+  }
+}
