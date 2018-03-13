@@ -5,6 +5,7 @@ const handlebars = require('express-handlebars');
 
 keystone.init({
   'name': 'thehyrulefantasy',
+  'port': process.env.PORT || 3001,
 
   'less': 'public',
   'static': 'public',
@@ -20,6 +21,7 @@ keystone.init({
   }).engine,
 
   'auto update': true,
+  'mongo': process.env.THEHYRULEFANTASY_MONGO_URI,
 
   'session': true,
   'auth': true,
