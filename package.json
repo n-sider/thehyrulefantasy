@@ -7,7 +7,18 @@
     "url": "git+https://github.com/n-sider/thehyrulefantasy.git"
   },
   "license": "ISC",
-  "dependencies": {
+  "bugs": {
+    "url": "https://github.com/n-sider/thehyrulefantasy/issues"
+  },
+  "homepage": "https://www.thehyrulefantasy.com",
+  "engines": {
+    "node": ">=10.15.1",
+    "npm": "=6.7.0"
+  },
+  "devDependencies": {
+    "eslint": "^5.6.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
     "navigo": "^7.1.2"
   }
 }
