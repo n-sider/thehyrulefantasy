@@ -1,0 +1,8 @@
+{{ define "main" }}
+  {{with .Content}}{{.}}{{end}}
+
+  {{ range where .Site.Pages "Params.story" .Title }}
+    {{ .Title }} - {{ .Content }}
+  {{ end }}
+
+{{ end }}

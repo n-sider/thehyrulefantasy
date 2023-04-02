@@ -10,7 +10,14 @@
 </head>
 <body>
   <header id="site-header">{{ block "header" . }}
-  header
+    <nav>
+      <ul>
+        <li><a href="/">The Hyrule Fantasy</a></li>
+        <li><a href="/stories">The Stories</a></li>
+        <li><a href="/timelines">The Timelines</a></li>
+        <li><a href="/threads">The Threads</a></li>
+      </ul>
+    </nav>
   {{ end }}</header>
   <main>{{ block "main" . }}
   oh no where's the content

@@ -1,3 +1,16 @@
 {{ define "main" }}
   {{with .Content}}{{.}}{{end}}
+
+  {{ range .Pages.GroupByParam "threadType" }}
+
+    <h2>{{ .Key }}</h2>
+
+    {{ range .Pages }}
+    <li>
+      <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+    </li>
+    {{ end }}
+
+  {{ end }}
+
 {{ end }}
