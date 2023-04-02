@@ -1,6 +1,6 @@
 {
   "name": "thehyrulefantasy",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "The Hyrule Fantasy",
   "repository": {
     "type": "git",
@@ -12,13 +12,7 @@
   },
   "homepage": "https://www.thehyrulefantasy.com",
   "engines": {
-    "node": ">=10.15.1",
-    "npm": "=6.7.0"
-  },
-  "devDependencies": {
-    "eslint": "^5.6.1",
-    "eslint-config-airbnb-base": "^13.1.0",
-    "eslint-plugin-import": "^2.14.0",
-    "navigo": "^7.1.2"
+    "node": ">=19.8.1",
+    "npm": "=9.5.1"
   }
 }
