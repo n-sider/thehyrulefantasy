@@ -5,3 +5,9 @@ title: The Timeline
 <p>I think this is just gonna show the most recent timeline partial, then link off to the other game pages to see other versions of it.</p>
 
 <p>OR NOT, this may need to have a "view as of this event" switcher, each going to a dedicated URL.  Particularly so I have a no-js fallback for when you choose to "expand" a timeline on an event page.</p>
+
+<p>On each timeline, little boxes around each part that's "new" relative to the previous iteration.</p>
+
+<p>The DOM for each timeline should be as semantic as possible, and represent a document outline. Lists, sections, headers as appropriate.</p>
+
+<p>Possible to.. async-HTTP-request a timeline page, grab its dom, select out the timeline part, and overwrite it into this page as a JS progressive enhancement? Push a history state in there? Really only worthwhile if we're trying to keep up some sort of year/game nav and don't want to lose its scroll position or something, if it's all in a picker you have to toggle up there's no point.</p>
