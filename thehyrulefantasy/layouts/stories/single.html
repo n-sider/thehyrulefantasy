@@ -3,14 +3,15 @@
     {{ with .Content }}{{ . }}{{ end }}
 
     {{ range where ( where .Site.Pages "Section" "timelines" ) ".Title" .Title }}
-      {{ .Content }}
+      <a href="{{ .Params.Url }}">{{ .Content }}</a>
     {{ end }}
 
     {{ $threads := where .Site.Pages "Params.story" .Title }}
     {{ with $threads }}
       <ul>
       {{ range $threads }}
-        <li>{{ .Title }} - {{ .Content }}</li>
+        <li>{{ .Title }} - {{ .Content }}<br>
+        <a href="/{{ .Dir }}">Follow this thread &gt;</a></li>
       {{ end }}
       </ul>
     {{ end }}

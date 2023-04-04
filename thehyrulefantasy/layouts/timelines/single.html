@@ -1,3 +1,5 @@
 {{ define "main" }}
+  {{ $story := where ( where .Site.Pages "Section" "stories" ) ".Title" .Title }}
+  {{ range $story }}<a href="{{ .Permalink }}">View this story &gt;</a>{{ end }}
   {{ with .Content }}{{ . }}{{ end }}
 {{ end }}

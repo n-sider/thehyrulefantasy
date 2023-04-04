@@ -4,9 +4,11 @@
   {{ with .Pages }}
   <ol>
     {{ range sort . ".File.LogicalName" }}
+    {{ $story := where ( where .Site.Pages "Section" "stories" ) ".Title" .Params.story }}
     <li>
       <article>
-        {{ .Title }} - {{ .Params.Story }}
+        {{ .Title }} - {{ range $story }}{{ .Params.title }}{{ end }}<br>
+        {{ range $story }}<a href="{{ .Permalink }}">View this story &gt;</a>{{ end }}
       </article>
     </li>
     {{ end }}
