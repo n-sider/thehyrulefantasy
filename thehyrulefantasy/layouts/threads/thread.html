@@ -1,13 +1,15 @@
 {{ define "main" }}
-  {{with .Content}}{{.}}{{end}}
+  {{ with .Content }}{{ . }}{{ end }}
 
-  {{with .Pages}}
+  {{ with .Pages }}
   <ol>
     {{ range sort . ".File.LogicalName" }}
     <li>
-      {{ .Title }} - {{ .Params.Story }}
+      <article>
+        {{ .Title }} - {{ .Params.Story }}
+      </article>
     </li>
-    {{end}}
+    {{ end }}
   </ol>
   {{ end }}
 

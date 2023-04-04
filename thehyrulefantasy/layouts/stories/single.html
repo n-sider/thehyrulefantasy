@@ -1,8 +1,18 @@
 {{ define "main" }}
-  {{with .Content}}{{.}}{{end}}
+  <article>
+    {{ with .Content }}{{ . }}{{ end }}
 
-  {{ range where .Site.Pages "Params.story" .Title }}
-    {{ .Title }} - {{ .Content }}
-  {{ end }}
+    {{ range where ( where .Site.Pages "Section" "timelines" ) ".Title" .Title }}
+      {{ .Content }}
+    {{ end }}
 
+    {{ $threads := where .Site.Pages "Params.story" .Title }}
+    {{ with $threads }}
+      <ul>
+      {{ range $threads }}
+        <li>{{ .Title }} - {{ .Content }}</li>
+      {{ end }}
+      </ul>
+    {{ end }}
+  </article>
 {{ end }}

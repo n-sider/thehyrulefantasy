@@ -1,5 +1,5 @@
 {{ define "main" }}
-  {{with .Content}}{{.}}{{end}}
+  {{ with .Content }}{{ . }}{{ end }}
 
   {{ range .Pages.GroupByParam "threadType" }}
 
@@ -7,7 +7,7 @@
 
     {{ range .Pages }}
     <li>
-      <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+      <a href="{{.Permalink}}">{{ .Date.Format "2006-01-02" }} | {{ .Title }}</a>
     </li>
     {{ end }}
 
