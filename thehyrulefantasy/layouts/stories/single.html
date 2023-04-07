@@ -11,7 +11,7 @@
       <ul>
       {{ range $threads }}
         <li>{{ .Title }} - {{ .Content }}<br>
-        <a href="/{{ .Dir }}">Follow this thread &gt;</a></li>
+        <a href="/{{ .File.Dir }}">Follow this thread &gt;</a></li>
       {{ end }}
       </ul>
     {{ end }}
